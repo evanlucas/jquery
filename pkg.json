@@ -1,0 +1,37 @@
+{
+  "name": "jquery",
+  "version": "0.0.1",
+  "description": "jQuery 1.10.2 for browserify",
+  "main": "index.js",
+  "url": "http://jquery.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/evanlucas/jquery.git"
+  },
+  "scripts": {
+    "test": "browserify test/main.js | testling",
+    "build": "browserify test/main.js > test/bundle.js",
+    "posttest": "killall phantomjs",
+    "pretest": "./scripts/setup.sh"
+  },
+  "keywords": [
+    "util",
+    "dom",
+    "jquery"
+  ],
+  "browser": {
+    "jquery": "index.js"
+  },
+  "author": "Evan Lucas <evanlucas@me.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^2.10.2"
+  },
+  "dependencies": {},
+  "testling": {
+    "html": "test/index.html",
+    "browsers": [
+      "safari/latest"
+    ]
+  }
+}
