@@ -9786,11 +9786,10 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 	}
 }
 
-/*
 if (typeof window === 'object' && typeof window.document === 'object') {
   window.jQuery = window.$ = jQuery;
 }
-*/
+
 
 return jQuery;
 
